@@ -30,14 +30,15 @@
 
          </label>
 {{> loginButtons}}
+{{#if currentUser}}
 
+  <form class="new-task">
 
-         <form class="new-task">
+    <input type="text" name="text" placeholder="Type to add new tasks" />
 
-           <input type="text" name="text" placeholder="Type to add new tasks" />
+  </form>
 
-         </form>
-
+{{/if}}
 
        </header>
 
@@ -79,7 +80,7 @@
 
 
 
-    <span class="text">{{text}}</span>
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
 
   </li>
 
