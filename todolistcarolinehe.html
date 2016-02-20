@@ -1,113 +1,55 @@
-
-
 <head>
 
-  <title>Todo List de Caroline</title>
-
+  <title>Todo Liste de Caroline</title>
+  <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet" type="text/css">
+<link rel="icon" href="caroline.png" />
 </head>
 
-
-
 <body>
-
-
-
      <div class="container">
-
-
-
        <header>
-
-        <h1>Todo List ({{incompleteCount}})</h1>
-
-
-
+        <h1>Todo Liste</h1>
+        <p>Il vous reste {{incompleteCount}} tâche(s) à effectuer</p>
          <label class="hide-completed">
-
            <input type="checkbox" checked="{{hideCompleted}}" />
-
-           Hide Completed Tasks
-
+           Cacher les tâches accomplies
          </label>
+
 {{> loginButtons}}
 {{#if currentUser}}
 
+
   <form class="new-task">
-
-    <input type="text" name="text" placeholder="Type to add new tasks" />
-
+    <input type="text" name="text" placeholder="Ajouter ici les nouvelles tâches" />
   </form>
-
+  <hr>
 {{/if}}
-
        </header>
-
-
-
        <ul>
-
-
-
-
-
-
       {{#each tasks}}
-
         {{> task}}
-
       {{/each}}
-
     </ul>
-
   </div>
-
 </body>
 
-
-
-
-
-
 <template name="task">
-
   <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
-
     <button class="delete">&times;</button>
-
-
-
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-
     {{#if isOwner}}
-
       <button class="toggle-private">
-
         {{#if private}}
-
-          Private
-
+          Privé
         {{else}}
-
-          Public
-
+          Publique
         {{/if}}
-
       </button>
-
     {{/if}}
-
     <span class="text"><strong>{{username}}</strong> - {{text}}</span>
-
   </li>
-
 </template>
 
-
-
-
-
 <template name="task">
-
   <li>{{text}}</li>
-
 </template>

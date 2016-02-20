@@ -1,18 +1,7 @@
 /* CSS declarations go here */
-/*body{
-    background-image:url("../background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height:100%;
-}*/
-
-
-/* CSS declarations go here */
 body {
-  font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  font-family: 'Walter Turncoat', cursive;
+  background-color: #989292;
   background-attachment: fixed;
 
   position: absolute;
@@ -28,7 +17,9 @@ body {
 }
 
 .container {
-  max-width: 600px;
+    border: solid 5px #333;
+    border-radius: 10px;
+  max-width: 800px;
   margin: 0 auto;
   min-height: 100%;
   background: white;
@@ -36,7 +27,7 @@ body {
 
 header {
   background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  background-image: linear-gradient(to bottom, #b5e697, #d5e9c6 100%);
   padding: 20px 15px 15px 15px;
   position: relative;
 }
@@ -46,7 +37,13 @@ header {
 }
 
 h1 {
-  font-size: 1.5em;
+    font-weight: bold;
+    color:rgb(11, 124, 56);
+    border:solid 3px rgb(11, 124, 56);
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 15px;
+  font-size: 3em;
   margin: 0;
   margin-bottom: 10px;
   display: inline-block;
@@ -62,7 +59,7 @@ form {
 .new-task input {
   box-sizing: border-box;
   padding: 10px 0;
-  background: transparent;
+  background: white;
   border: none;
   width: 100%;
   padding-right: 80px;
